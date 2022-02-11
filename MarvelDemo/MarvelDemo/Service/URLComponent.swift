@@ -1,6 +1,6 @@
 //
 //  URLComponent.swift
-//  OpenBankMarvelDemo
+//  MarvelDemo
 //
 //  Created by Vipul  on 10/02/22.
 //
