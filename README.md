@@ -22,6 +22,12 @@ The ViewController, which contains the views and other UIKit-related units.
 The Model, which contains the model of application.
 The ViewModel, which contains the networking and local data handling, as well as the models and authentication logic needed to connect to the Marvel API.
 
+# App Flow
+In this app we have 2 Screens, Character List and Character Details.
+# Character List:
+Character List contains the list of all character with their thumbnail image.
+# Character Details:
+Character Details contains the details of individual character with their details.
 
 ## Authors
 
