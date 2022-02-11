@@ -18,9 +18,9 @@ $ git clone git@github.com:vipul-katlana/MarvelDemo.git
 # Architecture
 This app has been developed using an MVVM+C architectural pattern, which is a combination of the Model-View-ViewModel architecture. In this implementation, the binding between the Views and the ViewModels is done via delegation. The app has three major layers:
 
-The Presentation layer, which contains the views and other UIKit-related units.
-The Domain layer, which contains the business logic and use cases.
-The Data layer, which contains the networking and local data handling, as well as the models and authentication logic needed to connect to the Marvel API.
+The ViewController, which contains the views and other UIKit-related units.
+The Model, which contains the model of application.
+The ViewModel, which contains the networking and local data handling, as well as the models and authentication logic needed to connect to the Marvel API.
 
 
 ## Authors
