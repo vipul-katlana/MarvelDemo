@@ -1,7 +1,7 @@
 # MarvelDemo
 
 # About
-The purpose of this project is to develop a sample app using MVVM architecture. For fetching a data we use Marvel API (https://developer.marvel.com/) This project has been built using UIKit and third party dependencies.
+The purpose of this project is to develop a sample app using MVVM architecture. For fetching a data we use Marvel API (https://developer.marvel.com/) This project has been built using UIKit.
 
 ## Features
 
