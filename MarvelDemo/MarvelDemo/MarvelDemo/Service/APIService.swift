@@ -17,7 +17,6 @@ private let sessionManager: URLSession = {
     return URLSession(configuration: urlSessionConfiguration, delegate: nil, delegateQueue: nil)
 }()
 
-
 class APIService: APIServiceProtocol {
     
     //MARK: Method

@@ -15,7 +15,6 @@ class CharacterListViewModel: NSObject {
     private let apiService: APIServiceProtocol
     var characterListArray: [CharacterResult] = [CharacterResult]()
     
-    var redirectionClouser: ((String)->())?
     
     //MARK: Initilize Service Object
     init( apiService: APIServiceProtocol = APIService()) {
@@ -38,24 +37,26 @@ class CharacterListViewModel: NSObject {
             }
         }
     }
+    
+    /// Method used to get name of character
+    /// - Parameter index: index path of cell
+    /// - Returns: name of character
+    func getName(index: Int)-> String {
+        return self.characterListArray[index].name ?? ""
+    }
+    
+    /// Method used to get description of character
+    /// - Parameter index: index path of cell
+    /// - Returns: description of character
+    func getDescription(index: Int)-> String {
+        return self.characterListArray[index].description ?? ""
+    }
+    
+    /// Method used to get thumbnail image of character
+    /// - Parameter index: ndex path of cell
+    /// - Returns: thhumbnail image of character
+    func getImage(index: Int)-> String {
+        return "\(self.characterListArray[index].thumbnail?.path ?? "").\(self.characterListArray[index].thumbnail?.extension_key ?? "")"
+    }
 }
 
-//MARK: TableviewDelegate & TableviewDataSource
-extension CharacterListViewModel: UITableViewDelegate, UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.characterListArray.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier.characterTableCell, for: indexPath) as! CharacterListTableViewCell
-        cell.setData(data: self.characterListArray[indexPath.row])
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if redirectionClouser != nil {
-            redirectionClouser!("\(self.characterListArray[indexPath.row].id ?? 0)")
-        }
-    }
-}

@@ -17,7 +17,6 @@ import UIKit
     }()
     
     //MARK: Class Methhod
-    
     /// showHud to show the loader
     static func showHud() {
         DispatchQueue.main.async {
@@ -28,7 +27,6 @@ import UIKit
             aVCObj.view.tag  = 10000
             aParent?.addSubview(aVCObj.view)
         }
-        
     }
     
     /// hideHud to hide the loader

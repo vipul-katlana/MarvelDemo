@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+
 let imageCache = NSCache<NSString, UIImage>()
 
 extension UIImageView {

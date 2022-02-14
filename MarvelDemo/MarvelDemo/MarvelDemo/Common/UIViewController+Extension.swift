@@ -9,7 +9,6 @@ import Foundation
 import UIKit
 
 extension UIViewController {
-    
     func displayAlert( msg: String?, ok: String = "Ok", okAction: (() -> Void)? = nil){
         let alertController = UIAlertController(title:  "\(AppConstant.appName)", message: msg, preferredStyle: .alert)
         let OKAction = UIAlertAction(title: ok, style: .default)

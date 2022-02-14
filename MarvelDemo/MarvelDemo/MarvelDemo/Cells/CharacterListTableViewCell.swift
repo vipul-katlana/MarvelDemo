@@ -20,11 +20,9 @@ class CharacterListTableViewCell: UITableViewCell {
     }
 
     //MARK: Cell Methods
-    /// Set the cell data
-    /// - Parameter data: character result object
-    func setData(data: CharacterResult) {
-        self.lblTitle.text = data.name ?? ""
-        self.lblDesc.text = data.description ?? ""
-        self.imgIcon.imageFromServerURL(("\(data.thumbnail?.path ?? "").\(data.thumbnail?.extension_key ?? "")"), placeHolder: UIImage(named: "placeholder_image"))
+    func setData(title: String, description: String, imageUrl: String) {
+        self.lblTitle.text = title
+        self.lblDesc.text = description
+        self.imgIcon.imageFromServerURL(imageUrl, placeHolder: UIImage(named: "placeholder_image"))
     }
 }
